@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SERVER_ADDRESS = 'http://localhost:8888';
+const SERVER_ADDRESS = 'http://localhost:3000';
 
 const options = {
 	method: 'GET',

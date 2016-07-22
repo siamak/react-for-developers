@@ -24,6 +24,18 @@ For Deploy:
 $ npm run deploy
 ```
 
+### Start server
+Go to [Twitter Developers](https://dev.twitter.com/) and after login and creating a new app, copy your `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret` in `server/index.js`.
+
+If you want edit port and address, change `PORT` in `server/index.js then open `src/modules/connection.js` and edit request url.
+
+Finally start node server:
+```bash
+$ cd server
+$ node index
+```
+Note: If you are in Iran you need to change your IP for accessing twitter.
+
 ## 🍀 License
 Thanks to [Mohammad Rajabifard](https://github.com/morajabi) for Twitter API.
 Copyright (c) 2016 Siamak Mokhtari. Licensed under [MIT](http://siamak.mit-license.org).
