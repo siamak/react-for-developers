@@ -4,6 +4,7 @@ import { Link } from 'react-router';
 
 import Header from './Header';
 import Tweets from './Tweets';
+import Footer from './Footer';
 
 class Main extends Component {
 	constructor(props) {
@@ -23,6 +24,7 @@ class Main extends Component {
 							<Tweets />
 						</section>
 					</div>
+					<Footer />
 				</main>
 				{this.props.children}
 			</div>

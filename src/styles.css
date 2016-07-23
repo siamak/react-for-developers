@@ -280,6 +280,21 @@ main {
 }
 
 
+.footer {
+	margin-top: 1rem;
+	letter-spacing: -.015625em;
+	word-spacing: -.023809524em;
+	white-space: nowrap;
+	a {
+		display: table;
+		margin: 0 auto;
+		color: #1742d6;
+		border-bottom: 1px dotted;
+		&:hover {
+			color: #212121;
+		}
+	}
+}
 .error {
 	position: relative;
 	text-align: center;
