@@ -24,6 +24,11 @@ For Deploy:
 $ npm run deploy
 ```
 
+For lint (Airbnb + React Config):
+```bash
+$ npm run lint
+```
+
 ### Start server
 Go to [Twitter Developers](https://dev.twitter.com/) and after login and creating a new app, copy your `consumer_key`, `consumer_secret`, `access_token`, `access_token_secret` in `server/index.js`.
 
