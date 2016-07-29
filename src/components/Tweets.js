@@ -11,18 +11,18 @@ class Tweets extends Component {
 		this.state = {
 			data: [],
 			colors: [],
-			loading: true
-		}
+			loading: true,
+		};
 	}
 	componentWillMount() {
 		connect.then((res) => {
-				this.setState({
-					data: res.data,
-					loading: false
-				});
-			}).catch((err) => {
-				console.error(err);
+			this.setState({
+				data: res.data,
+				loading: false,
 			});
+		}).catch((err) => {
+			throw new Error(err);
+		});
 	}
 
 	render() {
@@ -31,10 +31,20 @@ class Tweets extends Component {
 				<ul>
 					{
 						this.state.data.map((item, i) => {
-							if(item.lang != 'und' && !item.retweeted_status){
+							if (item.lang !== 'und' && !item.retweeted_status) {
 								return (
-									<Tweet key={i} name={item.user.name} lang={item.lang} username={item.user.screen_name} avatar={item.user.profile_image_url_https} diff_time={item.from_now} retweet_count={item.retweet_count} favorite_count={item.favorite_count} text={item.text} />
-								)
+									<Tweet
+										key={i}
+										name={item.user.name}
+										lang={item.lang}
+										username={item.user.screen_name}
+										avatar={item.user.profile_image_url_https}
+										diff_time={item.from_now}
+										retweet_count={item.retweet_count}
+										favorite_count={item.favorite_count}
+										text={item.text}
+									/>
+								);
 							}
 						})
 					}

@@ -1,6 +1,4 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
-
+import React, { Component, PropTypes } from 'react';
 
 import Header from './Header';
 import Tweets from './Tweets';
@@ -10,8 +8,8 @@ class Main extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			loading: true
-		}
+			loading: true,
+		};
 	}
 
 	render() {
@@ -26,10 +24,15 @@ class Main extends Component {
 					</div>
 					<Footer />
 				</main>
-				{this.props.children}
+				{ this.props.children }
 			</div>
 		);
 	}
 }
+
+
+Main.propTypes = {
+	children: PropTypes.element,
+};
 
 export default Main;

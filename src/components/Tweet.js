@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class Tweet extends Component {
 	isUnicode(str) {
-		var letters = [];
-		for (var i = 0; i <= str.length; i++) {
+		const letters = [];
+		for (let i = 0; i <= str.length; i++) {
 			letters[i] = str.substring((i - 1), i);
 			if (letters[i].charCodeAt() > 255) { return true; }
 		}
@@ -28,7 +28,7 @@ class Tweet extends Component {
 				</div>
 					<div className="figure_contain">
 						<h4 className="title">
-							<span dir={this.isUnicode(this.props.name) ? "rtl" : "ltr"}>
+							<span dir={this.isUnicode(this.props.name) ? 'rtl' : 'ltr'}>
 								{this.props.name}
 							</span>
 							<span className="diff-time">{this.props.diff_time}</span>
@@ -50,5 +50,17 @@ class Tweet extends Component {
 		);
 	}
 }
+
+
+Tweet.propTypes = {
+	lang: PropTypes.string,
+	avatar: PropTypes.string.isRequired,
+	name: PropTypes.string.isRequired,
+	diff_time: PropTypes.string.isRequired,
+	username: PropTypes.string.isRequired,
+	text: PropTypes.string.isRequired,
+	favorite_count: PropTypes.number.isRequired,
+	retweet_count: PropTypes.number.isRequired,
+};
 
 export default Tweet;
