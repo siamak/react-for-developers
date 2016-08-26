@@ -1,21 +1,13 @@
 {
-  "name": "webpack-react-babel-boilerplate",
-  "version": "1.0.0",
-  "description": "Webpack, React, Babel for an app!",
+  "name": "react-for-developers",
+  "version": "0.0.2",
+  "description": "1 hour Workshop Covering React.js in ES6.",
   "scripts": {
     "server": "node server",
     "start": "webpack-dev-server --devtool eval --progress --colors",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "lint": "./node_modules/.bin/eslint --ext jsx --ext js src || true"
   },
-  "keywords": [
-    "webpack",
-    "react",
-    "babel",
-    "css-loader",
-    "autoprefixer",
-    "boilerplate"
-  ],
   "author": "Siamak Mokhtari <s.mokhtari75@gmail.com> (http://siamak.us)",
   "license": "MIT",
   "dependencies": {
